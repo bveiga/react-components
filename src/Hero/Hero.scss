@@ -1,0 +1,30 @@
+.vs-hero {
+	position: relative;
+	font-family: $font-heading;
+	font-weight: 600;
+	margin: 0;
+
+	p {
+		font-size: 1.5rem;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	.card-body {
+		padding: 1.25rem 0;
+	}
+
+	.vs-text-special {
+		font-size: 2.25rem;
+		margin-bottom: 2rem;
+		line-height: 1;
+	}
+}
+
+.vs-text-special {
+	font-family: $font-special;
+	text-decoration: underline;
+
+}

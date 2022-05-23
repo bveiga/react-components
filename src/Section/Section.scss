@@ -1,0 +1,11 @@
+.vs-section {
+	&--primary {
+		background-color: $color-primary;
+		color: white;
+	}
+
+	&--secondary {
+		background-color: $color-secondary;
+		color: white;
+	}
+}

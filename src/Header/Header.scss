@@ -1,0 +1,60 @@
+.vs-header {
+	font-family: $font-heading;
+	// TODO: remove this
+	background-color: $color-primary;
+
+	&.scrolled {
+		background-color: white;
+	}
+
+	&.navbar {
+		padding: 0;
+	}
+
+	.navbar-nav {
+		.nav-link {
+			color: $color-text-nav;
+			font-weight: 600;
+			line-height: 1.5rem;
+
+			&.active,
+			&:hover {
+				color: initial;
+				background-color: white;
+				transition: all 0.3s ease;
+			}
+		}
+
+	}
+
+	.vs-brand {
+		font-weight: 600;
+		color: $color-text-nav;
+
+		&:hover {
+			color: white;
+		}
+
+		&__logo {
+			height: 23px;
+			pointer-events: none;
+
+			@media (prefers-reduced-motion: no-preference) {
+				animation: App-logo-spin infinite 20s linear;
+			}
+		}
+	}
+}
+
+.vs-navbar-toggler {
+	border: none;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

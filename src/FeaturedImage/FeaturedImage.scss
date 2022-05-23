@@ -1,0 +1,25 @@
+.vs-featured-image {
+	img {
+		width: 100px;
+	}
+
+	a {
+		color: inherit;
+
+		:hover {
+			color: inherit;
+		}
+	}
+
+	p {
+		font-family: $font-heading;
+		font-weight: 500;
+		margin-top: 1rem;
+		margin-bottom: 0;
+		text-transform: uppercase;
+	}
+
+	@include breakpoint(xs) {
+		margin-bottom: 2rem;
+	}
+}

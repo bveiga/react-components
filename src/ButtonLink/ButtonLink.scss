@@ -1,0 +1,41 @@
+.vs-btn {
+	position: relative;
+	color: white;
+	border-radius: 0;
+	font-weight: 600;
+	font-size: 1rem;
+	transition: none;
+
+	&--primary {
+		background-color: $color-primary;
+		box-shadow: 0 5px $color-primary-dark;
+
+		&:hover {
+			color: white;
+		}
+	}
+
+	&--secondary {
+		background-color: $color-secondary;
+		box-shadow: 0 5px $color-secondary-dark;
+
+		&:hover {
+			color: white;
+		}
+	}
+
+	&--tertiary {
+		color: $color-text;
+		background-color: white;
+		box-shadow: 0 5px $color-primary-dark;
+
+		&:hover {
+			color: $color-text;
+		}
+	}
+
+	&:hover {
+		box-shadow: none;
+		top: 5px;
+	}
+}

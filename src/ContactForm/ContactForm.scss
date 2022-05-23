@@ -1,0 +1,26 @@
+.input-group {
+	margin-bottom: 1rem;
+
+	label,
+	input,
+	textarea {
+		display: block;
+		width: 100%;
+	}
+
+	label {
+		font-size: 1rem;
+		font-weight: 600;
+		font-family: $font-heading;
+		margin-bottom: 0;
+	}
+
+	input {
+		padding: 10px 18px;
+	}
+
+	textarea {
+		padding: 10px 18px;
+	}
+}
+
