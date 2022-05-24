@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
 
-import { Image } from '../../common/types'
+import { Image } from '../types'
 
 interface FeaturedStoryProps {
 	// FeaturedStory image

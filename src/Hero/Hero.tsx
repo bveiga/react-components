@@ -1,6 +1,6 @@
 import React, { FC, useState, useEffect } from 'react';
 
-import { Image } from '../../common/types'
+import { Image } from '../types'
 
 interface HeroProps {
 	// Hero image
