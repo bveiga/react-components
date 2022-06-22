@@ -1,31 +1,28 @@
 {
-	"name": "react-components",
-	"author": "Bruno Veiga <bruno.veiga@veigastudios.com> (https://realbrunoveiga.com)",
-	"license": "MIT",
-	"version": "1.0.0",
-	"dependencies": {
-		"@types/classnames": "2.2.6",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
-		"react-router-dom": "^5.2.0",
-		"sass": "^1.51.0",
-		"typescript": "^3.7.5"
-	},
-	"devDependencies": {
-		"@types/react": "^17.0.0",
-		"@types/react-dom": "^17.0.0",
-		"@types/react-router-dom": "^5.1.5"
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 firefox version",
-			"last 1 chrome version",
-			"last 1 safari version"
-		]
-	}
+  "name": "@bveiga/react-components",
+  "author": "Bruno Veiga <bruno.veiga@veigastudios.com> (https://realbrunoveiga.com)",
+  "description": "This is a library of reusable React-style TypeScript components originally made for projects by Bruno Veiga.",
+  "license": "MIT",
+  "version": "1.0.0",
+  "homepage": "https://github.com/bveiga/react-components",
+  "dependencies": {
+    "@types/classnames": "2.2.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "sass": "^1.51.0",
+    "typescript": "^3.7.5"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bveiga/react-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bveiga/react-components/issues"
+  }
 }

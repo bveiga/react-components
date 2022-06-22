@@ -1,5 +1,5 @@
-# Veiga Studios React Components
-This is a library of reusable React-style components originally made for projects by Veiga Studios.
+# React Components
+This is a library of reusable React-style TypeScript components originally made for projects by Bruno Veiga.
 
 ## Version History
 v1.0.0
