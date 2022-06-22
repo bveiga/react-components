@@ -15,6 +15,6 @@ v0.1.0
 - Original separation of components library
 
 ## License
-GNU General Public License v3.0 or later
+MIT
 
 See [LICENSE](LICENSE.txt) to see the full text.
