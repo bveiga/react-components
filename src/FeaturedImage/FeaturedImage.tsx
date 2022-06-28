@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-
 import { Image } from '../types'
+import './FeaturedImage.scss';
 
 interface FeaturedImageProps {
 	// Number of columns to use for desktop and mobile
