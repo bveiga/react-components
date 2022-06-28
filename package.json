@@ -18,6 +18,9 @@
     "@types/react-dom": "^17.0.0",
     "@types/react-router-dom": "^5.1.5"
   },
+  "scripts": {
+    "compile": "sass --watch src/all.scss:build/compiled.css --style compressed --no-source-map"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bveiga/react-components.git"
