@@ -3,7 +3,7 @@
   "author": "Bruno Veiga <bruno.veiga@veigastudios.com> (https://realbrunoveiga.com)",
   "description": "This is a library of reusable React-style TypeScript components originally made for projects by Bruno Veiga.",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/bveiga/react-components",
   "dependencies": {
     "@types/classnames": "2.2.6",
