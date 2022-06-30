@@ -1,5 +1,6 @@
 import React, { FC, useState, FormEvent } from 'react';
 import Section from '../Section/Section';
+import './ContactForm.scss';
 
 interface ContactFormProps {
 	successMessage?: string;

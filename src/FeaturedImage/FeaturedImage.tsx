@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-
 import { Image } from '../types'
+import './FeaturedImage.scss';
 
 interface FeaturedImageProps {
 	// Number of columns to use for desktop and mobile
@@ -30,7 +30,7 @@ const FeaturedImage: FC<FeaturedImageProps> = ({
 		<div className={compClasses}>
 			<a href={url} target='_blank' rel='noopener noreferrer'>
 				<img src={image.src} alt={image.alt} />
-				<p>{text}</p>
+				<h5>{text}</h5>
 			</a>
 		</div>
 	);
