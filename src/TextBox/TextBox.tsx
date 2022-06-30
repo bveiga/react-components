@@ -21,7 +21,7 @@ const TextBox: FC<TextBoxProps> = ({
 	sizeMobile = 12,
 	posVertical,
 	posHorizontal,
-	overlayImage,
+	overlayImage = false,
 	children
 }) => {
 	// Classes for textbox positioning
