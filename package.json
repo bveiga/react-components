@@ -19,7 +19,7 @@
     "@types/react-router-dom": "^5.1.5"
   },
   "scripts": {
-    "compile": "sass --watch src/all.scss:build/compiled.css --style compressed --no-source-map"
+    "build": "sass --watch src/components.scss:build/compiled.css --style compressed --no-source-map"
   },
   "repository": {
     "type": "git",

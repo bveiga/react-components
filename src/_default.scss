@@ -1,23 +1,11 @@
-/*--- Sizes ---*/
-$header-height: 50px !default;
-
-/*--- Fonts ---*/
-$font-body: 'Open Sans', 'Helvetica Neue', sans-serif !default;
-$font-heading: 'Open Sans', 'Helvetica Neue', sans-serif !default;
-$font-special: 'Open Sans', 'Helvetica Neue', sans-serif !default;
-
 /*--- Colors ---*/
 $color-text: #333 !default;
 $color-text-nav: white !default;
-$color-text-link: #055C9D !default;
-$color-primary: #055C9D !default;
-$color-primary-dark: #003060 !default;
+$color-text-link: #3265ff !default;
+$color-primary: #3265ff !default;
+$color-primary-dark: #3053a9 !default;
 $color-secondary: #a6a6a6 !default;
 $color-secondary-dark: #666666 !default;
-
-/*--- Z-Index ---*/
-$z-index-base: 1000 !default;
-$z-index-overlay: 2000 !default;
 
 /*--- Screen Sizes ---*/
 $screen-xs: '576px' !default;

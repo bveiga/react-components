@@ -30,7 +30,7 @@ const FeaturedImage: FC<FeaturedImageProps> = ({
 		<div className={compClasses}>
 			<a href={url} target='_blank' rel='noopener noreferrer'>
 				<img src={image.src} alt={image.alt} />
-				<p>{text}</p>
+				<h5>{text}</h5>
 			</a>
 		</div>
 	);
