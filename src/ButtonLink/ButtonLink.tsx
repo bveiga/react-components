@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
-
 import { LinkElement } from '../types'
+import './ButtonLink.scss'
 
 export enum ButtonVariant {
 	Primary = 'primary',

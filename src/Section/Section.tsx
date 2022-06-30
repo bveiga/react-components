@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import './Section.scss';
 
 export enum SectionVariant {
 	Primary = 'primary',

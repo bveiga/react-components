@@ -1,0 +1,36 @@
+/*--- Colors ---*/
+$color-text: #333 !default;
+$color-text-nav: white !default;
+$color-text-link: #3265ff !default;
+$color-primary: #3265ff !default;
+$color-primary-dark: #3053a9 !default;
+$color-secondary: #a6a6a6 !default;
+$color-secondary-dark: #666666 !default;
+
+/*--- Screen Sizes ---*/
+$screen-xs: '576px' !default;
+$screen-sm: '768px' !default;
+$screen-md: '992px' !default;
+$screen-lg: '1200px' !default;
+
+@mixin breakpoint($class) {
+	@if $class == xs {
+		@media (max-width: $screen-xs) { @content; }
+	}
+
+	@else if $class == sm {
+		@media (min-width: $screen-sm) { @content; }
+	}
+
+	@else if $class == md {
+		@media (min-width: $screen-md) { @content; }
+	}
+
+	@else if $class == lg {
+		@media (min-width: $screen-lg) { @content; }
+	}
+
+	@else {
+		@warn "Breakpoint mixin supports: xs, sm, md, lg";
+	}
+}
