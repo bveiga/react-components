@@ -23,7 +23,8 @@ Here's an example page module using the component:
 ```ts
 const AboutPage: FC<AboutPageProps> = ({}) => {
 	const portraitImage = {
-		src: 'https://via.placeholder.com/300x400'
+		src: 'https://via.placeholder.com/300x400',
+		alt: 'Featured Image Placeholder'
 	};
 
 	return (
