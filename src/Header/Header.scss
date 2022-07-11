@@ -1,14 +1,14 @@
 @import '../default';
 
 .vs-header {
-	// TODO: remove this
+	// TODO: Handle this through component options
 	background-color: $color-primary;
 
 	&.scrolled {
 		background-color: white;
 	}
 
-	&.navbar {
+	.navbar {
 		padding: 0;
 	}
 
@@ -26,6 +26,10 @@
 			}
 		}
 
+	}
+
+	.navbar-toggler {
+		border: none;
 	}
 
 	.vs-brand {
@@ -47,9 +51,16 @@
 	}
 }
 
-.vs-navbar-toggler {
-	border: none;
+@include breakpoint('xs') {
+	.vs-header .vs-brand {
+		margin-left: 15px;
+	}
+
+	.navbar-nav .nav-link {
+		padding: 8px 15px;
+	}
 }
+
 
 @keyframes App-logo-spin {
 	from {
