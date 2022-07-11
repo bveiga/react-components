@@ -20,14 +20,28 @@ const Header: FC<HeaderProps> = ({
 	logo,
 	navList,
 	activeIndex,
-	isLight = true
+	isLight = false
 }) => {
-	let navClasses = 'collapse navbar-collapse';
 	const [state, setState] = useState({
 		navToggled: false
 	});
+	let navClasses = 'collapse navbar-collapse';
+	let navbarShade = isLight ? 'light' : 'dark';
 
-	let navbarShade: string = isLight ? 'light' : 'dark';
+	const toggleNav = () => {
+		setState({ ...state, navToggled: !state.navToggled })
+	};
+
+	const renderNavigation = (link: LinkElement, index: number, activeIndex?: number): JSX.Element => {
+		const compClasses = (index === activeIndex) ? 'nav-item active' : 'nav-item';
+		return (
+			<li className={compClasses} key={index}>
+				<NavLink to={link.url} className='nav-link' activeClassName="active" onClick={toggleNav}>
+					{link.text}
+				</NavLink>
+			</li>
+		);
+	}
 
 	return (
 		// TODO: add back the 'fixed-top' class
@@ -48,7 +62,7 @@ const Header: FC<HeaderProps> = ({
 						aria-controls='navbarNav'
 						aria-expanded='false'
 						aria-label='Toggle navigation'
-						onClick={() => setState({ ...state, navToggled: !state.navToggled })}>
+						onClick={toggleNav}>
 						<span className='navbar-toggler-icon'></span>
 					</button>
 
@@ -63,17 +77,6 @@ const Header: FC<HeaderProps> = ({
 				</div>
 			</nav>
 		</header>
-	);
-}
-
-const renderNavigation = function(link: LinkElement, index: number, activeIndex?: number): JSX.Element {
-	const compClasses = (index === activeIndex) ? 'nav-item active' : 'nav-item';
-	return (
-		<li className={compClasses} key={index}>
-			<NavLink to={link.url} className='nav-link' activeClassName="active">
-				{link.text}
-			</NavLink>
-		</li>
 	);
 }
 
