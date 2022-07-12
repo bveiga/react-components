@@ -52,6 +52,11 @@ const AboutPage: FC<AboutPageProps> = ({}) => {
 9. TextBox
 
 ## Version History
+v1.0.2
+- Fixed issue where mobile nav stayed open when navigating to a new page
+- Fixed `navbar-light` and `navbar-dark` class from Bootstrap
+- Removed hardcoded API for contact forms
+
 v1.0.1
 - Fixed style inheritance issues
 - Added a build script to test if Sass compiles within the repo
