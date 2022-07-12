@@ -10,57 +10,73 @@ interface HeaderProps {
 	// Navigation properties
 	navList?: LinkElement[];
 	activeIndex?: number;
+
+	// Styling
+	isLight?: Boolean;
 }
 
-const Header: FC<HeaderProps> = ({ brandName, logo, navList, activeIndex }) => {
-	let navClasses = 'collapse navbar-collapse';
+const Header: FC<HeaderProps> = ({
+	brandName,
+	logo,
+	navList,
+	activeIndex,
+	isLight = false
+}) => {
 	const [state, setState] = useState({
 		navToggled: false
 	});
+	let navClasses = 'collapse navbar-collapse';
+	let navbarShade = isLight ? 'light' : 'dark';
+
+	const toggleNav = () => {
+		setState({ ...state, navToggled: !state.navToggled })
+	};
+
+	const renderNavigation = (link: LinkElement, index: number, activeIndex?: number): JSX.Element => {
+		const compClasses = (index === activeIndex) ? 'nav-item active' : 'nav-item';
+		return (
+			<li className={compClasses} key={index}>
+				<NavLink to={link.url} className='nav-link' activeClassName="active" onClick={toggleNav}>
+					{link.text}
+				</NavLink>
+			</li>
+		);
+	}
 
 	return (
 		// TODO: add back the 'fixed-top' class
-		<nav className='vs-header navbar navbar-expand-sm navbar-light'>
-			<div className='container'>
-				{/* Logo/Brand */}
-				<a className='vs-brand navbar-brand' href='/'>
-					{logo && <img src={logo} className='vs-brand__logo' alt='logo' />}
-					<span className={logo ? 'vs-brand__name sr-only' : 'vs-brand__name'}>{brandName}</span>
-				</a>
+		<header className="vs-header">
+			<nav className={'navbar navbar-expand-sm navbar-'+navbarShade}>
+				<div className='container'>
+					{/* Logo/Brand */}
+					<a className='vs-brand navbar-brand' href='/'>
+						{logo && <img src={logo} className='vs-brand__logo' alt='logo' />}
+						<span className={logo ? 'vs-brand__name sr-only' : 'vs-brand__name'}>{brandName}</span>
+					</a>
 
-				{/* Mobile Toggle */}
-				<button
-					className='navbar-toggler'
-					data-toggle='collapse'
-					data-target='#navbarNav'
-					aria-controls='navbarNav'
-					aria-expanded='false'
-					aria-label='Toggle navigation'
-					onClick={() => setState({ ...state, navToggled: !state.navToggled })}>
-					<span className='navbar-toggler-icon'></span>
-				</button>
+					{/* Mobile Toggle */}
+					<button
+						className='navbar-toggler'
+						data-toggle='collapse'
+						data-target='#navbarNav'
+						aria-controls='navbarNav'
+						aria-expanded='false'
+						aria-label='Toggle navigation'
+						onClick={toggleNav}>
+						<span className='navbar-toggler-icon'></span>
+					</button>
 
-				{/* Navigation */}
-				{navList && (
-					<div className={state.navToggled ? navClasses + ' show' : navClasses} id='navbarNav'>
-						<ul className='navbar-nav ml-auto'>
-							{navList.map((link, index) => renderNavigation(link, index, activeIndex))}
-						</ul>
-					</div>
-				)}
-			</div>
-		</nav>
-	);
-}
-
-const renderNavigation = function(link: LinkElement, index: number, activeIndex?: number): JSX.Element {
-	const compClasses = (index === activeIndex) ? 'nav-item active' : 'nav-item';
-	return (
-		<li className={compClasses} key={index}>
-			<NavLink to={link.url} className='nav-link' activeClassName="active">
-				{link.text}
-			</NavLink>
-		</li>
+					{/* Navigation */}
+					{navList && (
+						<div className={state.navToggled ? navClasses + ' show' : navClasses} id='navbarNav'>
+							<ul className='navbar-nav ml-auto'>
+								{navList.map((link, index) => renderNavigation(link, index, activeIndex))}
+							</ul>
+						</div>
+					)}
+				</div>
+			</nav>
+		</header>
 	);
 }
 

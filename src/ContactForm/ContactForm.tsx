@@ -2,10 +2,6 @@ import React, { FC, useState, FormEvent } from 'react';
 import Section from '../Section/Section';
 import './ContactForm.scss';
 
-interface ContactFormProps {
-	successMessage?: string;
-}
-
 interface ContactFormFields {
 	// Indexer
 	[index: string]: string;
@@ -30,7 +26,13 @@ const initialState: ContactFormState = {
 	submitted: false
 };
 
+interface ContactFormProps {
+	emailAPI: string;
+	successMessage?: string;
+}
+
 const ContactForm: FC<ContactFormProps> = ({
+	emailAPI,
 	successMessage
 }) => {
 	const [state, setState] = useState(JSON.parse(JSON.stringify(initialState)));
@@ -50,7 +52,7 @@ const ContactForm: FC<ContactFormProps> = ({
 		xhr.addEventListener('load', () => {
 			console.log(xhr.responseText);
 		});
-		xhr.open('POST', '/servlet/api.php?rquest=sendMail');
+		xhr.open('POST', emailAPI);
 		xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
 		xhr.send(JSON.stringify(state.fields));
 	}

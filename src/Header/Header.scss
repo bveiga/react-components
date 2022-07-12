@@ -1,36 +1,60 @@
 @import '../default';
 
 .vs-header {
-	// TODO: remove this
+	// TODO: Handle this through component options
 	background-color: $color-primary;
 
 	&.scrolled {
-		background-color: white;
+		background-color: #fff;
 	}
 
-	&.navbar {
+	.navbar {
 		padding: 0;
+
+		&.navbar-light {
+			color: $color-text;
+
+			.nav-link {
+				&.active,
+				&:hover {
+					color: #fff;
+					background-color: $color-primary;
+				}
+			}
+		}
+
+		&.navbar-dark {
+			.nav-link {
+				color: #fff;
+
+				&.active,
+				&:hover {
+					color: $color-text;
+					background-color: #fff;
+				}
+			}
+		}
 	}
 
 	.navbar-nav {
 		.nav-link {
-			color: $color-text-nav;
 			font-weight: 600;
 			line-height: 1.5rem;
 
 			&.active,
 			&:hover {
-				color: initial;
-				background-color: white;
 				transition: all 0.3s ease;
 			}
 		}
 
 	}
 
+	.navbar-toggler {
+		border: none;
+	}
+
 	.vs-brand {
 		font-weight: 600;
-		color: $color-text-nav;
 
 		&:hover {
 			color: white;
@@ -47,9 +71,16 @@
 	}
 }
 
-.vs-navbar-toggler {
-	border: none;
+@include breakpoint('xs') {
+	.vs-header .vs-brand {
+		margin-left: 15px;
+	}
+
+	.navbar-nav .nav-link {
+		padding: 8px 15px;
+	}
 }
+
 
 @keyframes App-logo-spin {
 	from {
