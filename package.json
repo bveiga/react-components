@@ -1,7 +1,7 @@
 {
   "name": "@bveiga/react-components",
   "author": "Bruno Veiga <bruno.veiga@veigastudios.com> (https://realbrunoveiga.com)",
-  "description": "This is a library of reusable React-style TypeScript components originally made for projects by Bruno Veiga.",
+  "description": "This is a library of reusable Functional React components written in TypeScript.",
   "license": "MIT",
   "version": "1.1.2",
   "homepage": "https://github.com/bveiga/react-components",
