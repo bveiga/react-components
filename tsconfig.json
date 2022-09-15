@@ -9,13 +9,13 @@
 		"jsx": "react",
 		"module": "ESNext",
 		"moduleResolution": "node",
-		"outDir": "build",
+		"outDir": "dist",
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
 	},
 	"exclude": [
-		"build",
+		"dist",
 		"node_modules",
 	]
 }
