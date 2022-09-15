@@ -3,7 +3,7 @@
   "author": "Bruno Veiga <bruno.veiga@veigastudios.com> (https://realbrunoveiga.com)",
   "description": "This is a library of reusable Functional React components written in TypeScript.",
   "license": "MIT",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "homepage": "https://github.com/bveiga/react-components",
   "dependencies": {
     "@types/classnames": "2.2.6",
@@ -15,34 +15,47 @@
     "typescript": "^3.7.5"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^14.0.1",
+    "@rollup/plugin-typescript": "^8.5.0",
     "@testing-library/react": "^12.1.5",
-		"@types/jest": "^28.1.6",
-		"@types/react": "^18.0.15",
-		"@types/react-dom": "^18.0.6",
+    "@types/jest": "^28.1.6",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
     "@types/react-router-dom": "^5.1.5",
     "jest": "^28.1.3",
-		"jest-environment-jsdom": "^28.1.3",
+    "jest-environment-jsdom": "^28.1.3",
+    "rollup": "^2.79.0",
+    "rollup-plugin-dts": "^4.2.2",
     "ts-jest": "^28.0.7",
+    "tslib": "^2.4.0",
     "typescript": "^4.7.4"
   },
   "jest": {
-		"moduleNameMapper": {
-			"\\.(css|less|sass|scss)$": "<rootDir>/mocks/mockStyle.ts",
-			"\\.(jpg|jpeg|png|gif|webp|svg|eot|otf|ttf)$": "<rootDir>/mocks/mockFile.ts"
-		},
-		"testEnvironment": "jsdom",
-		"transform": {
-			"^.+\\.(ts|tsx|js|jsx)$": "ts-jest"
-		}
-	},
-  "scripts": {
-    "build": "sass --watch src/components.scss:build/compiled.css --style compressed --no-source-map",
-    "test": "jest --coverage"
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/mocks/mockStyle.ts",
+      "\\.(jpg|jpeg|png|gif|webp|svg|eot|otf|ttf)$": "<rootDir>/mocks/mockFile.ts"
+    },
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.(ts|tsx|js|jsx)$": "ts-jest"
+    }
   },
+  "main": "build/cjs/index.js",
+  "module": "build/esm/index.js",
+  "files": [
+    "build"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bveiga/react-components.git"
   },
+  "scripts": {
+    "build": "rollup -c",
+    "styles": "sass --watch src/components.scss:build/compiled.css --style compressed --no-source-map",
+    "test": "jest --coverage"
+  },
+  "types": "build/index.d.ts",
   "bugs": {
     "url": "https://github.com/bveiga/react-components/issues"
   }

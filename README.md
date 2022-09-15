@@ -52,6 +52,10 @@ const AboutPage: FC<AboutPageProps> = ({}) => {
 9. TextBox
 
 ## Version History
+v2.0.0
+- Converted repository to work with non-CRA apps
+- Added jest for unit tests
+
 v1.0.2
 - Fixed issue where mobile nav stayed open when navigating to a new page
 - Fixed `navbar-light` and `navbar-dark` class from Bootstrap
