@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import './Section.scss';
 
 export enum SectionVariant {
@@ -8,6 +8,7 @@ export enum SectionVariant {
 }
 
 interface SectionProps {
+	children?: ReactNode;
 	noColumns?: boolean;
 	title?: string;
 

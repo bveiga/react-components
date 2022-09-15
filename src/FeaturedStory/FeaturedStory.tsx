@@ -1,23 +1,21 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import classnames from 'classnames';
 import { Image } from '../types'
 import './FeaturedStory.scss';
 
 interface FeaturedStoryProps {
+	children?: ReactNode;
+
 	// FeaturedStory image
 	image: Image;
-
-	// Background Color
-	colorBg?: string;
 
 	reverseRows?: boolean;
 }
 
 const FeaturedStory: FC<FeaturedStoryProps> = ({
+	children,
 	image,
-	colorBg,
 	reverseRows = false,
-	children
 }) => {
 	const rowClasses = classnames('row', {
 		'flex-row-reverse': reverseRows

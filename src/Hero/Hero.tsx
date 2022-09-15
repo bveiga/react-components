@@ -1,8 +1,10 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, { FC, useState, useEffect, ReactNode } from 'react';
 import { Image } from '../types'
 import './Hero.scss';
 
 interface HeroProps {
+	children?: ReactNode;
+
 	// Hero image
 	image?: Image;
 
@@ -17,11 +19,11 @@ interface HeroProps {
 }
 
 const Hero: FC<HeroProps> = ({
+	children,
 	image,
 	colorText,
 	colorBg,
-	isFullHeight,
-	children
+	isFullHeight
 }) => {
 	const [state, setState] = useState({
 		height: window.innerHeight

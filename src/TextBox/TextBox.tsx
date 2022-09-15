@@ -1,10 +1,11 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import classnames from 'classnames';
 
 interface TextBoxProps {
-	// Width of element in number of colums (1-12)
-	sizeDesktop?: number;
-	sizeMobile?: number;
+	children?: ReactNode;
+
+	// Is this going over a image?
+	overlayImage?: boolean;
 
 	// Vertical position (top, center, bottom)
 	posVertical?: string;
@@ -12,17 +13,18 @@ interface TextBoxProps {
 	// Horizontal position (left, center, right)
 	posHorizontal?: string;
 
-	// Is this going over a image?
-	overlayImage?: boolean;
+	// Width of element in number of colums (1-12)
+	sizeDesktop?: number;
+	sizeMobile?: number;
 }
 
 const TextBox: FC<TextBoxProps> = ({
+	children,
 	sizeDesktop = 12,
 	sizeMobile = 12,
 	posVertical,
 	posHorizontal,
 	overlayImage = false,
-	children
 }) => {
 	// Classes for textbox positioning
 	const textBoxOuterClasses = classnames('container card-body d-md-block h-100 ', {
