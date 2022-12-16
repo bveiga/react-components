@@ -54,6 +54,8 @@ const AboutPage: FC<AboutPageProps> = ({}) => {
 ## Version History
 v2.0.0
 - Converted repository to work with non-CRA apps
+- Added rollup
+- Removed webpack
 - Added jest for unit tests
 
 v1.0.2
