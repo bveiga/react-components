@@ -2,20 +2,21 @@
 	"compilerOptions": {
 		"allowSyntheticDefaultImports": true,
 		"declaration": true,
-		"declarationDir": "types",
-		"emitDeclarationOnly": true,
+		"declarationDir": "build",
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"jsx": "react",
 		"module": "ESNext",
 		"moduleResolution": "node",
-		"outDir": "dist",
+		"outDir": "build",
+		"rootDir": "src",
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
 	},
 	"exclude": [
-		"dist",
+		"build",
 		"node_modules",
-	]
+	],
+	"include": ["src/**/*"]
 }
